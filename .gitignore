@@ -4,6 +4,7 @@
 *.dll
 *.so
 *.dylib
+cmd/violin/violin
 
 # Test binary, built with `go test -c`
 *.test
@@ -15,3 +16,7 @@
 # vendor/
 
 # Secrets
+
+# Assets
+cmd/violin/img/**
+cmd/violin/mp3/**
