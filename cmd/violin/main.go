@@ -12,6 +12,7 @@ import (
 
 	"github.com/ardanlabs/conf"
 	"github.com/pkg/errors"
+	"github.com/rosalita/goviolin/cmd/violin/internal/handlers"
 )
 
 func main() {
@@ -64,11 +65,9 @@ func run() error {
 	}
 	log.Printf("main : Config :\n%v\n", out)
 
-	mux := http.NewServeMux()
-
 	api := http.Server{
 		Addr:         cfg.Web.APIHost,
-		Handler:      mux,
+		Handler:      handlers.NewMux(log),
 		ReadTimeout:  cfg.Web.ReadTimeout,
 		WriteTimeout: cfg.Web.WriteTimeout,
 	}
