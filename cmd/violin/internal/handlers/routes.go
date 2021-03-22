@@ -18,8 +18,8 @@ func NewMux(log *log.Logger) *http.ServeMux {
 	mux.HandleFunc("/", base.Home)
 	mux.HandleFunc("/scale", base.Scale)
 	mux.HandleFunc("/scaleshow", base.ScaleShow)
-	// mux.HandleFunc("/duets", base.Duets)
-	// mux.HandleFunc("/duetshow", base.DuetShow)
+	mux.HandleFunc("/duets", base.Duet)
+	mux.HandleFunc("/duetshow", base.DuetShow)
 
 	return mux
 }
