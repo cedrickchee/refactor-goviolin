@@ -6,38 +6,6 @@ import (
 	"net/http"
 )
 
-// ScaleOptions represents the options for generating content.
-type ScaleOptions struct {
-	Name       string
-	Value      string
-	IsDisabled bool
-	IsChecked  bool
-	Text       string
-}
-
-// PageVars represents the input for generating a web page.
-type PageVars struct {
-	Title         string
-	Scalearp      string
-	Key           string
-	Pitch         string
-	DuetImgPath   string
-	ScaleImgPath  string
-	GifPath       string
-	AudioPath     string
-	AudioPath2    string
-	DuetAudioBoth string
-	DuetAudio1    string
-	DuetAudio2    string
-	LeftLabel     string
-	RightLabel    string
-	ScaleOptions  []ScaleOptions
-	DuetOptions   []ScaleOptions
-	PitchOptions  []ScaleOptions
-	KeyOptions    []ScaleOptions
-	OctaveOptions []ScaleOptions
-}
-
 // Render generates the HTML for any given web page.
 func Render(w http.ResponseWriter, tmpl string, pageVars PageVars) error {
 
