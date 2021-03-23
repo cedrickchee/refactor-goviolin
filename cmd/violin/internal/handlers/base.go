@@ -99,9 +99,9 @@ func (b *Base) Duet(w http.ResponseWriter, r *http.Request) {
 	b.log.Printf("%s %s -> %s", r.Method, r.URL.Path, r.RemoteAddr)
 
 	dOptions := []render.Option{
-		{"Duet", "G Major", false, true, "G Major"},
-		{"Duet", "D Major", false, false, "D Major"},
-		{"Duet", "A Major", false, false, "A Major"},
+		{Name: "Duet", Value: "G Major", IsDisabled: false, IsChecked: true, Text: "G Major"},
+		{Name: "Duet", Value: "D Major", IsDisabled: false, IsChecked: false, Text: "D Major"},
+		{Name: "Duet", Value: "A Major", IsDisabled: false, IsChecked: false, Text: "A Major"},
 	}
 
 	pv := render.PageVars{
@@ -123,9 +123,9 @@ func (b *Base) DuetShow(w http.ResponseWriter, r *http.Request) {
 
 	// define default duet options
 	dOptions := []render.Option{
-		{"Duet", "G Major", false, true, "G Major"},
-		{"Duet", "D Major", false, false, "D Major"},
-		{"Duet", "A Major", false, false, "A Major"},
+		{Name: "Duet", Value: "G Major", IsDisabled: false, IsChecked: true, Text: "G Major"},
+		{Name: "Duet", Value: "D Major", IsDisabled: false, IsChecked: false, Text: "D Major"},
+		{Name: "Duet", Value: "A Major", IsDisabled: false, IsChecked: false, Text: "A Major"},
 	}
 
 	// Set a placeholder image path, this will be changed later.
@@ -145,9 +145,9 @@ func (b *Base) DuetShow(w http.ResponseWriter, r *http.Request) {
 	switch dvalues[0] {
 	case "D Major":
 		dOptions = []render.Option{
-			{"Duet", "G Major", false, false, "G Major"},
-			{"Duet", "D Major", false, true, "D Major"},
-			{"Duet", "A Major", false, false, "A Major"},
+			{Name: "Duet", Value: "G Major", IsDisabled: false, IsChecked: false, Text: "G Major"},
+			{Name: "Duet", Value: "D Major", IsDisabled: false, IsChecked: true, Text: "D Major"},
+			{Name: "Duet", Value: "A Major", IsDisabled: false, IsChecked: false, Text: "A Major"},
 		}
 		DuetImgPath = "img/duet/dmajor.png"
 		DuetAudioBoth = "mp3/duet/dmajorduetboth.mp3"
@@ -155,9 +155,9 @@ func (b *Base) DuetShow(w http.ResponseWriter, r *http.Request) {
 		DuetAudio2 = "mp3/duet/dmajorduetpt2.mp3"
 	case "G Major":
 		dOptions = []render.Option{
-			{"Duet", "G Major", false, true, "G Major"},
-			{"Duet", "D Major", false, false, "D Major"},
-			{"Duet", "A Major", false, false, "A Major"},
+			{Name: "Duet", Value: "G Major", IsDisabled: false, IsChecked: true, Text: "G Major"},
+			{Name: "Duet", Value: "D Major", IsDisabled: false, IsChecked: false, Text: "D Major"},
+			{Name: "Duet", Value: "A Major", IsDisabled: false, IsChecked: false, Text: "A Major"},
 		}
 		DuetImgPath = "img/duet/gmajor.png"
 		DuetAudioBoth = "mp3/duet/gmajorduetboth.mp3"
@@ -166,9 +166,9 @@ func (b *Base) DuetShow(w http.ResponseWriter, r *http.Request) {
 
 	case "A Major":
 		dOptions = []render.Option{
-			{"Duet", "G Major", false, false, "G Major"},
-			{"Duet", "D Major", false, false, "D Major"},
-			{"Duet", "A Major", false, true, "A Major"},
+			{Name: "Duet", Value: "G Major", IsDisabled: false, IsChecked: false, Text: "G Major"},
+			{Name: "Duet", Value: "D Major", IsDisabled: false, IsChecked: false, Text: "D Major"},
+			{Name: "Duet", Value: "A Major", IsDisabled: false, IsChecked: true, Text: "A Major"},
 		}
 		DuetImgPath = "img/duet/amajor.png"
 		DuetAudioBoth = "mp3/duet/amajorduetboth.mp3"
