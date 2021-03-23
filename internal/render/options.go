@@ -37,33 +37,33 @@ type PageVars struct {
 // SetDefaultOptions provide the defaults for rendering scales.
 func SetDefaultOptions() ([]Option, []Option, []Option, []Option) {
 	scale := []Option{
-		Option{"Scale", "Scale", false, true, "Scales"},
-		Option{"Scale", "Arpeggio", false, false, "Arpeggios"},
+		{"Scale", "Scale", false, true, "Scales"},
+		{"Scale", "Arpeggio", false, false, "Arpeggios"},
 	}
 
 	pitch := []Option{
-		Option{"Pitch", "Major", false, true, "Major"},
-		Option{"Pitch", "Minor", false, false, "Minor"},
+		{"Pitch", "Major", false, true, "Major"},
+		{"Pitch", "Minor", false, false, "Minor"},
 	}
 
 	key := []Option{
-		Option{"Key", "A", false, true, "A"},
-		Option{"Key", "Bb", false, false, "Bb"},
-		Option{"Key", "B", false, false, "B"},
-		Option{"Key", "C", false, false, "C"},
-		Option{"Key", "C#/Db", false, false, "C#/Db"},
-		Option{"Key", "D", false, false, "D"},
-		Option{"Key", "Eb", false, false, "Eb"},
-		Option{"Key", "E", false, false, "E"},
-		Option{"Key", "F", false, false, "F"},
-		Option{"Key", "F#/Gb", false, false, "F#/Gb"},
-		Option{"Key", "G", false, false, "G"},
-		Option{"Key", "G#/Ab", false, false, "G#/Ab"},
+		{"Key", "A", false, true, "A"},
+		{"Key", "Bb", false, false, "Bb"},
+		{"Key", "B", false, false, "B"},
+		{"Key", "C", false, false, "C"},
+		{"Key", "C#/Db", false, false, "C#/Db"},
+		{"Key", "D", false, false, "D"},
+		{"Key", "Eb", false, false, "Eb"},
+		{"Key", "E", false, false, "E"},
+		{"Key", "F", false, false, "F"},
+		{"Key", "F#/Gb", false, false, "F#/Gb"},
+		{"Key", "G", false, false, "G"},
+		{"Key", "G#/Ab", false, false, "G#/Ab"},
 	}
 
 	octave := []Option{
-		Option{"Octave", "1", false, true, "1 Octave"},
-		Option{"Octave", "2", false, false, "2 Octave"},
+		{"Octave", "1", false, true, "1 Octave"},
+		{"Octave", "2", false, false, "2 Octave"},
 	}
 
 	return scale, pitch, key, octave
@@ -76,14 +76,14 @@ func SetScaleOptions(scale string) []Option {
 	switch scale {
 	case "Scale":
 		options = []Option{
-			Option{Name: "Scale", Value: "Scale", IsDisabled: false, IsChecked: true, Text: "Scales"},
-			Option{Name: "Scale", Value: "Arpeggio", IsDisabled: false, IsChecked: false, Text: "Arpeggios"},
+			{Name: "Scale", Value: "Scale", IsDisabled: false, IsChecked: true, Text: "Scales"},
+			{Name: "Scale", Value: "Arpeggio", IsDisabled: false, IsChecked: false, Text: "Arpeggios"},
 		}
 
 	case "Arpeggio":
 		options = []Option{
-			Option{Name: "Scale", Value: "Scale", IsDisabled: false, IsChecked: false, Text: "Scales"},
-			Option{Name: "Scale", Value: "Arpeggio", IsDisabled: false, IsChecked: true, Text: "Arpeggios"},
+			{Name: "Scale", Value: "Scale", IsDisabled: false, IsChecked: false, Text: "Scales"},
+			{Name: "Scale", Value: "Arpeggio", IsDisabled: false, IsChecked: true, Text: "Arpeggios"},
 		}
 	}
 
@@ -97,14 +97,14 @@ func SetPitchOptions(pitch string) []Option {
 	switch pitch {
 	case "Major":
 		options = []Option{
-			Option{Name: "Pitch", Value: "Major", IsDisabled: false, IsChecked: true, Text: "Major"},
-			Option{Name: "Pitch", Value: "Minor", IsDisabled: false, IsChecked: false, Text: "Minor"},
+			{Name: "Pitch", Value: "Major", IsDisabled: false, IsChecked: true, Text: "Major"},
+			{Name: "Pitch", Value: "Minor", IsDisabled: false, IsChecked: false, Text: "Minor"},
 		}
 
 	case "Minor":
 		options = []Option{
-			Option{Name: "Pitch", Value: "Major", IsDisabled: false, IsChecked: false, Text: "Major"},
-			Option{Name: "Pitch", Value: "Minor", IsDisabled: false, IsChecked: true, Text: "Minor"},
+			{Name: "Pitch", Value: "Major", IsDisabled: false, IsChecked: false, Text: "Major"},
+			{Name: "Pitch", Value: "Minor", IsDisabled: false, IsChecked: true, Text: "Minor"},
 		}
 	}
 
@@ -118,14 +118,14 @@ func SetOctaveOptions(octave string) []Option {
 	switch octave {
 	case "1":
 		options = []Option{
-			Option{Name: "Octave", Value: "1", IsDisabled: false, IsChecked: true, Text: "1 Octave"},
-			Option{Name: "Octave", Value: "2", IsDisabled: false, IsChecked: false, Text: "2 Octave"},
+			{Name: "Octave", Value: "1", IsDisabled: false, IsChecked: true, Text: "1 Octave"},
+			{Name: "Octave", Value: "2", IsDisabled: false, IsChecked: false, Text: "2 Octave"},
 		}
 
 	case "2":
 		options = []Option{
-			Option{Name: "Octave", Value: "1", IsDisabled: false, IsChecked: false, Text: "1 Octave"},
-			Option{Name: "Octave", Value: "2", IsDisabled: false, IsChecked: true, Text: "2 Octave"},
+			{Name: "Octave", Value: "1", IsDisabled: false, IsChecked: false, Text: "1 Octave"},
+			{Name: "Octave", Value: "2", IsDisabled: false, IsChecked: true, Text: "2 Octave"},
 		}
 	}
 
@@ -139,184 +139,184 @@ func SetKeyOptions(key string) []Option {
 	switch key {
 	case "A":
 		options = []Option{
-			Option{"Key", "A", false, true, "A"},
-			Option{"Key", "Bb", false, false, "Bb"},
-			Option{"Key", "B", false, false, "B"},
-			Option{"Key", "C", false, false, "C"},
-			Option{"Key", "C#/Db", false, false, "C#/Db"},
-			Option{"Key", "D", false, false, "D"},
-			Option{"Key", "Eb", false, false, "Eb"},
-			Option{"Key", "E", false, false, "E"},
-			Option{"Key", "F", false, false, "F"},
-			Option{"Key", "F#/Gb", false, false, "F#/Gb"},
-			Option{"Key", "G", false, false, "G"},
-			Option{"Key", "G#/Ab", false, false, "G#/Ab"},
+			{"Key", "A", false, true, "A"},
+			{"Key", "Bb", false, false, "Bb"},
+			{"Key", "B", false, false, "B"},
+			{"Key", "C", false, false, "C"},
+			{"Key", "C#/Db", false, false, "C#/Db"},
+			{"Key", "D", false, false, "D"},
+			{"Key", "Eb", false, false, "Eb"},
+			{"Key", "E", false, false, "E"},
+			{"Key", "F", false, false, "F"},
+			{"Key", "F#/Gb", false, false, "F#/Gb"},
+			{"Key", "G", false, false, "G"},
+			{"Key", "G#/Ab", false, false, "G#/Ab"},
 		}
 	case "Bb":
 		options = []Option{
-			Option{"Key", "A", false, false, "A"},
-			Option{"Key", "Bb", false, true, "Bb"},
-			Option{"Key", "B", false, false, "B"},
-			Option{"Key", "C", false, false, "C"},
-			Option{"Key", "C#/Db", false, false, "C#/Db"},
-			Option{"Key", "D", false, false, "D"},
-			Option{"Key", "Eb", false, false, "Eb"},
-			Option{"Key", "E", false, false, "E"},
-			Option{"Key", "F", false, false, "F"},
-			Option{"Key", "F#/Gb", false, false, "F#/Gb"},
-			Option{"Key", "G", false, false, "G"},
-			Option{"Key", "G#/Ab", false, false, "G#/Ab"},
+			{"Key", "A", false, false, "A"},
+			{"Key", "Bb", false, true, "Bb"},
+			{"Key", "B", false, false, "B"},
+			{"Key", "C", false, false, "C"},
+			{"Key", "C#/Db", false, false, "C#/Db"},
+			{"Key", "D", false, false, "D"},
+			{"Key", "Eb", false, false, "Eb"},
+			{"Key", "E", false, false, "E"},
+			{"Key", "F", false, false, "F"},
+			{"Key", "F#/Gb", false, false, "F#/Gb"},
+			{"Key", "G", false, false, "G"},
+			{"Key", "G#/Ab", false, false, "G#/Ab"},
 		}
 	case "B":
 		options = []Option{
-			Option{"Key", "A", false, false, "A"},
-			Option{"Key", "Bb", false, false, "Bb"},
-			Option{"Key", "B", false, true, "B"},
-			Option{"Key", "C", false, false, "C"},
-			Option{"Key", "C#/Db", false, false, "C#/Db"},
-			Option{"Key", "D", false, false, "D"},
-			Option{"Key", "Eb", false, false, "Eb"},
-			Option{"Key", "E", false, false, "E"},
-			Option{"Key", "F", false, false, "F"},
-			Option{"Key", "F#/Gb", false, false, "F#/Gb"},
-			Option{"Key", "G", false, false, "G"},
-			Option{"Key", "G#/Ab", false, false, "G#/Ab"},
+			{"Key", "A", false, false, "A"},
+			{"Key", "Bb", false, false, "Bb"},
+			{"Key", "B", false, true, "B"},
+			{"Key", "C", false, false, "C"},
+			{"Key", "C#/Db", false, false, "C#/Db"},
+			{"Key", "D", false, false, "D"},
+			{"Key", "Eb", false, false, "Eb"},
+			{"Key", "E", false, false, "E"},
+			{"Key", "F", false, false, "F"},
+			{"Key", "F#/Gb", false, false, "F#/Gb"},
+			{"Key", "G", false, false, "G"},
+			{"Key", "G#/Ab", false, false, "G#/Ab"},
 		}
 	case "C":
 		options = []Option{
-			Option{"Key", "A", false, false, "A"},
-			Option{"Key", "Bb", false, false, "Bb"},
-			Option{"Key", "B", false, false, "B"},
-			Option{"Key", "C", false, true, "C"},
-			Option{"Key", "C#/Db", false, false, "C#/Db"},
-			Option{"Key", "D", false, false, "D"},
-			Option{"Key", "Eb", false, false, "Eb"},
-			Option{"Key", "E", false, false, "E"},
-			Option{"Key", "F", false, false, "F"},
-			Option{"Key", "F#/Gb", false, false, "F#/Gb"},
-			Option{"Key", "G", false, false, "G"},
-			Option{"Key", "G#/Ab", false, false, "G#/Ab"},
+			{"Key", "A", false, false, "A"},
+			{"Key", "Bb", false, false, "Bb"},
+			{"Key", "B", false, false, "B"},
+			{"Key", "C", false, true, "C"},
+			{"Key", "C#/Db", false, false, "C#/Db"},
+			{"Key", "D", false, false, "D"},
+			{"Key", "Eb", false, false, "Eb"},
+			{"Key", "E", false, false, "E"},
+			{"Key", "F", false, false, "F"},
+			{"Key", "F#/Gb", false, false, "F#/Gb"},
+			{"Key", "G", false, false, "G"},
+			{"Key", "G#/Ab", false, false, "G#/Ab"},
 		}
 	case "C#/Db":
 		options = []Option{
-			Option{"Key", "A", false, false, "A"},
-			Option{"Key", "Bb", false, false, "Bb"},
-			Option{"Key", "B", false, false, "B"},
-			Option{"Key", "C", false, false, "C"},
-			Option{"Key", "C#/Db", false, true, "C#/Db"},
-			Option{"Key", "D", false, false, "D"},
-			Option{"Key", "Eb", false, false, "Eb"},
-			Option{"Key", "E", false, false, "E"},
-			Option{"Key", "F", false, false, "F"},
-			Option{"Key", "F#/Gb", false, false, "F#/Gb"},
-			Option{"Key", "G", false, false, "G"},
-			Option{"Key", "G#/Ab", false, false, "G#/Ab"},
+			{"Key", "A", false, false, "A"},
+			{"Key", "Bb", false, false, "Bb"},
+			{"Key", "B", false, false, "B"},
+			{"Key", "C", false, false, "C"},
+			{"Key", "C#/Db", false, true, "C#/Db"},
+			{"Key", "D", false, false, "D"},
+			{"Key", "Eb", false, false, "Eb"},
+			{"Key", "E", false, false, "E"},
+			{"Key", "F", false, false, "F"},
+			{"Key", "F#/Gb", false, false, "F#/Gb"},
+			{"Key", "G", false, false, "G"},
+			{"Key", "G#/Ab", false, false, "G#/Ab"},
 		}
 	case "D":
 		options = []Option{
-			Option{"Key", "A", false, false, "A"},
-			Option{"Key", "Bb", false, false, "Bb"},
-			Option{"Key", "B", false, false, "B"},
-			Option{"Key", "C", false, false, "C"},
-			Option{"Key", "C#/Db", false, false, "C#/Db"},
-			Option{"Key", "D", false, true, "D"},
-			Option{"Key", "Eb", false, false, "Eb"},
-			Option{"Key", "E", false, false, "E"},
-			Option{"Key", "F", false, false, "F"},
-			Option{"Key", "F#/Gb", false, false, "F#/Gb"},
-			Option{"Key", "G", false, false, "G"},
-			Option{"Key", "G#/Ab", false, false, "G#/Ab"},
+			{"Key", "A", false, false, "A"},
+			{"Key", "Bb", false, false, "Bb"},
+			{"Key", "B", false, false, "B"},
+			{"Key", "C", false, false, "C"},
+			{"Key", "C#/Db", false, false, "C#/Db"},
+			{"Key", "D", false, true, "D"},
+			{"Key", "Eb", false, false, "Eb"},
+			{"Key", "E", false, false, "E"},
+			{"Key", "F", false, false, "F"},
+			{"Key", "F#/Gb", false, false, "F#/Gb"},
+			{"Key", "G", false, false, "G"},
+			{"Key", "G#/Ab", false, false, "G#/Ab"},
 		}
 	case "Eb":
 		options = []Option{
-			Option{"Key", "A", false, false, "A"},
-			Option{"Key", "Bb", false, false, "Bb"},
-			Option{"Key", "B", false, false, "B"},
-			Option{"Key", "C", false, false, "C"},
-			Option{"Key", "C#/Db", false, false, "C#/Db"},
-			Option{"Key", "D", false, false, "D"},
-			Option{"Key", "Eb", false, true, "Eb"},
-			Option{"Key", "E", false, false, "E"},
-			Option{"Key", "F", false, false, "F"},
-			Option{"Key", "F#/Gb", false, false, "F#/Gb"},
-			Option{"Key", "G", false, false, "G"},
-			Option{"Key", "G#/Ab", false, false, "G#/Ab"},
+			{"Key", "A", false, false, "A"},
+			{"Key", "Bb", false, false, "Bb"},
+			{"Key", "B", false, false, "B"},
+			{"Key", "C", false, false, "C"},
+			{"Key", "C#/Db", false, false, "C#/Db"},
+			{"Key", "D", false, false, "D"},
+			{"Key", "Eb", false, true, "Eb"},
+			{"Key", "E", false, false, "E"},
+			{"Key", "F", false, false, "F"},
+			{"Key", "F#/Gb", false, false, "F#/Gb"},
+			{"Key", "G", false, false, "G"},
+			{"Key", "G#/Ab", false, false, "G#/Ab"},
 		}
 	case "E":
 		options = []Option{
-			Option{"Key", "A", false, false, "A"},
-			Option{"Key", "Bb", false, false, "Bb"},
-			Option{"Key", "B", false, false, "B"},
-			Option{"Key", "C", false, false, "C"},
-			Option{"Key", "C#/Db", false, false, "C#/Db"},
-			Option{"Key", "D", false, false, "D"},
-			Option{"Key", "Eb", false, false, "Eb"},
-			Option{"Key", "E", false, true, "E"},
-			Option{"Key", "F", false, false, "F"},
-			Option{"Key", "F#/Gb", false, false, "F#/Gb"},
-			Option{"Key", "G", false, false, "G"},
-			Option{"Key", "G#/Ab", false, false, "G#/Ab"},
+			{"Key", "A", false, false, "A"},
+			{"Key", "Bb", false, false, "Bb"},
+			{"Key", "B", false, false, "B"},
+			{"Key", "C", false, false, "C"},
+			{"Key", "C#/Db", false, false, "C#/Db"},
+			{"Key", "D", false, false, "D"},
+			{"Key", "Eb", false, false, "Eb"},
+			{"Key", "E", false, true, "E"},
+			{"Key", "F", false, false, "F"},
+			{"Key", "F#/Gb", false, false, "F#/Gb"},
+			{"Key", "G", false, false, "G"},
+			{"Key", "G#/Ab", false, false, "G#/Ab"},
 		}
 	case "F":
 		options = []Option{
-			Option{"Key", "A", false, false, "A"},
-			Option{"Key", "Bb", false, false, "Bb"},
-			Option{"Key", "B", false, false, "B"},
-			Option{"Key", "C", false, false, "C"},
-			Option{"Key", "C#/Db", false, false, "C#/Db"},
-			Option{"Key", "D", false, false, "D"},
-			Option{"Key", "Eb", false, false, "Eb"},
-			Option{"Key", "E", false, false, "E"},
-			Option{"Key", "F", false, true, "F"},
-			Option{"Key", "F#/Gb", false, false, "F#/Gb"},
-			Option{"Key", "G", false, false, "G"},
-			Option{"Key", "G#/Ab", false, false, "G#/Ab"},
+			{"Key", "A", false, false, "A"},
+			{"Key", "Bb", false, false, "Bb"},
+			{"Key", "B", false, false, "B"},
+			{"Key", "C", false, false, "C"},
+			{"Key", "C#/Db", false, false, "C#/Db"},
+			{"Key", "D", false, false, "D"},
+			{"Key", "Eb", false, false, "Eb"},
+			{"Key", "E", false, false, "E"},
+			{"Key", "F", false, true, "F"},
+			{"Key", "F#/Gb", false, false, "F#/Gb"},
+			{"Key", "G", false, false, "G"},
+			{"Key", "G#/Ab", false, false, "G#/Ab"},
 		}
 	case "F#/Gb":
 		options = []Option{
-			Option{"Key", "A", false, false, "A"},
-			Option{"Key", "Bb", false, false, "Bb"},
-			Option{"Key", "B", false, false, "B"},
-			Option{"Key", "C", false, false, "C"},
-			Option{"Key", "C#/Db", false, false, "C#/Db"},
-			Option{"Key", "D", false, false, "D"},
-			Option{"Key", "Eb", false, false, "Eb"},
-			Option{"Key", "E", false, false, "E"},
-			Option{"Key", "F", false, false, "F"},
-			Option{"Key", "F#/Gb", false, true, "F#/Gb"},
-			Option{"Key", "G", false, false, "G"},
-			Option{"Key", "G#/Ab", false, false, "G#/Ab"},
+			{"Key", "A", false, false, "A"},
+			{"Key", "Bb", false, false, "Bb"},
+			{"Key", "B", false, false, "B"},
+			{"Key", "C", false, false, "C"},
+			{"Key", "C#/Db", false, false, "C#/Db"},
+			{"Key", "D", false, false, "D"},
+			{"Key", "Eb", false, false, "Eb"},
+			{"Key", "E", false, false, "E"},
+			{"Key", "F", false, false, "F"},
+			{"Key", "F#/Gb", false, true, "F#/Gb"},
+			{"Key", "G", false, false, "G"},
+			{"Key", "G#/Ab", false, false, "G#/Ab"},
 		}
 	case "G":
 		options = []Option{
-			Option{"Key", "A", false, false, "A"},
-			Option{"Key", "Bb", false, false, "Bb"},
-			Option{"Key", "B", false, false, "B"},
-			Option{"Key", "C", false, false, "C"},
-			Option{"Key", "C#/Db", false, false, "C#/Db"},
-			Option{"Key", "D", false, false, "D"},
-			Option{"Key", "Eb", false, false, "Eb"},
-			Option{"Key", "E", false, false, "E"},
-			Option{"Key", "F", false, false, "F"},
-			Option{"Key", "F#/Gb", false, false, "F#/Gb"},
-			Option{"Key", "G", false, true, "G"},
-			Option{"Key", "G#/Ab", false, false, "G#/Ab"},
+			{"Key", "A", false, false, "A"},
+			{"Key", "Bb", false, false, "Bb"},
+			{"Key", "B", false, false, "B"},
+			{"Key", "C", false, false, "C"},
+			{"Key", "C#/Db", false, false, "C#/Db"},
+			{"Key", "D", false, false, "D"},
+			{"Key", "Eb", false, false, "Eb"},
+			{"Key", "E", false, false, "E"},
+			{"Key", "F", false, false, "F"},
+			{"Key", "F#/Gb", false, false, "F#/Gb"},
+			{"Key", "G", false, true, "G"},
+			{"Key", "G#/Ab", false, false, "G#/Ab"},
 		}
 
 	case "G#/Ab":
 		options = []Option{
-			Option{"Key", "A", false, false, "A"},
-			Option{"Key", "Bb", false, false, "Bb"},
-			Option{"Key", "B", false, false, "B"},
-			Option{"Key", "C", false, false, "C"},
-			Option{"Key", "C#/Db", false, false, "C#/Db"},
-			Option{"Key", "D", false, false, "D"},
-			Option{"Key", "Eb", false, false, "Eb"},
-			Option{"Key", "E", false, false, "E"},
-			Option{"Key", "F", false, false, "F"},
-			Option{"Key", "F#/Gb", false, false, "F#/Gb"},
-			Option{"Key", "G", false, false, "G"},
-			Option{"Key", "G#/Ab", false, true, "G#/Ab"},
+			{"Key", "A", false, false, "A"},
+			{"Key", "Bb", false, false, "Bb"},
+			{"Key", "B", false, false, "B"},
+			{"Key", "C", false, false, "C"},
+			{"Key", "C#/Db", false, false, "C#/Db"},
+			{"Key", "D", false, false, "D"},
+			{"Key", "Eb", false, false, "Eb"},
+			{"Key", "E", false, false, "E"},
+			{"Key", "F", false, false, "F"},
+			{"Key", "F#/Gb", false, false, "F#/Gb"},
+			{"Key", "G", false, false, "G"},
+			{"Key", "G#/Ab", false, true, "G#/Ab"},
 		}
 	}
 
