@@ -134,12 +134,10 @@ func (b *Base) DuetShow(w http.ResponseWriter, r *http.Request) {
 	DuetAudio1 := "mp3/duet/gmajorduetpt1"
 	DuetAudio2 := "mp3/duet/gmajorduetpt2"
 
-	r.ParseForm() //r is url.Values which is a map[string][]string
+	r.ParseForm()
 	var dvalues []string
-	for _, values := range r.Form { // range over map
-		for _, value := range values { // range over []string
-			dvalues = append(dvalues, value) // stick each value in a slice I know the name of
-		}
+	for _, values := range r.Form {
+		dvalues = append(dvalues, values...)
 	}
 
 	switch dvalues[0] {
